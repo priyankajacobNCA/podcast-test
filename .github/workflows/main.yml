@@ -19,7 +19,7 @@ jobs:
       - name: Push Repo
         run: |
           git config user.name priyankajacobNCA
-          git config user.email priyankajacob@news.com.au
+          git config user.email priyanka.jacob@news.com.au
           git add .
           git commit -m "Modified Feed"
           git push
