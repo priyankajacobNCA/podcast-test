@@ -29,7 +29,7 @@ for item in yaml_data['item']:
     xml_tree.SubElement(item_element,'description').text = item['description']
     xml_tree.SubElement(item_element,'pubDate').text = item['published']
     xml_tree.SubElement(item_element,'itunes:duration').text = item['duration']
-    xml_tree.SubElement(item_element,'enclosure', {'url': link_prefix + item['file'],'type':'audio/mpeg', 'length':item['length']})
+    xml_tree.SubElement(item_element,'enclosure', {'url': link_prefix + item['file'],'type':yaml_data['format'], 'length':item['length']})
 
 output_tree = xml_tree.ElementTree(rss_element)
 output_tree.write('podacst.xml',encoding='UTF-8',xml_declaration=True)
