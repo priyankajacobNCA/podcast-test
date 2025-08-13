@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
-      - name: Runs Podcast Feed Generator
+      - name: Runs Feed Generator
         uses: priyankajacobNCA/podcast-generator@main
           
           
